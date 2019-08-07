@@ -27,10 +27,11 @@ label start:
 
     # These display lines of dialogue.
 
-    b "...the Cow Gun."
+    b "..But naw! In a rare moment of seriousness, thank you very much for listening to us over this first series of 2 Good Boys."
 
-    b "Once you add a story, pictures, and music, you can release it to the world!"
+    b "I have been Barry Topping. I'm a good boy."
 
+    g "I was Guy Woodward. Am a good boy."
     # This ends the game.
 
     return
