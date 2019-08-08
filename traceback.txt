@@ -1,32 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 39, in script
-    "[Barry hits stop on the big podcast machine.]"
-KeyError: u'Barry hits stop on the big podcast machine'
+  File "game/script.rpy", line 74, in script
+    show barry left at left + 15 with dissolve
+  File "game/script.rpy", line 74, in <module>
+    show barry left at left + 15 with dissolve
+TypeError: unsupported operand type(s) for +: 'ATLTransform' and 'int'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 39, in script
-    "[Barry hits stop on the big podcast machine.]"
-  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\ast.py", line 706, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\exports.py", line 1336, in say
-    who(what, *args, **kwargs)
-  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\character.py", line 1126, in __call__
-    what = what_pattern.replace("[what]", sub(what, translate=True))
-  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\character.py", line 1115, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\substitutions.py", line 253, in substitute
-    s = formatter.vformat(s, (), kwargs)
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
-KeyError: u'Barry hits stop on the big podcast machine'
+  File "game/script.rpy", line 74, in script
+    show barry left at left + 15 with dissolve
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\ast.py", line 1181, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\ast.py", line 1140, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\python.py", line 2035, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\python.py", line 2028, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 74, in <module>
+    show barry left at left + 15 with dissolve
+TypeError: unsupported operand type(s) for +: 'ATLTransform' and 'int'
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 A 2 Good Boys Adventure 1.0
-Thu Aug 08 18:55:30 2019
+Thu Aug 08 21:47:17 2019
