@@ -36,6 +36,16 @@ label start:
 
     g "I was Guy Woodward. Am a good boy."
 
+    "[[Barry hits stop on the big podcast machine.]"
+
+    g "Chippy?"
+
+    b "I dunno, I was wanting a munchy box, man."
+
+    g "Let's away and wander, see what takes our fancy."
+
+    "Little did the 2 Good Boys know, but this decision would put the fate of the podcast in utmost peril..."
+
 
     # This ends the game.
 
