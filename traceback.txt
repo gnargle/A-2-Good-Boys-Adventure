@@ -1,30 +1,46 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 74, in script
-    show barry left at left + 15 with dissolve
-  File "game/script.rpy", line 74, in <module>
-    show barry left at left + 15 with dissolve
-TypeError: unsupported operand type(s) for +: 'ATLTransform' and 'int'
+  File "game/script.rpy", line 165, in script
+    g "So just tae check - you saw the Thistle at the chippy too, aye?"
+IOError: Couldn't find file 'music/crickets.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 74, in script
-    show barry left at left + 15 with dissolve
-  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\ast.py", line 1181, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\ast.py", line 1140, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\python.py", line 2035, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\python.py", line 2028, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 74, in <module>
-    show barry left at left + 15 with dissolve
-TypeError: unsupported operand type(s) for +: 'ATLTransform' and 'int'
+  File "game/script.rpy", line 165, in script
+    g "So just tae check - you saw the Thistle at the chippy too, aye?"
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\ast.py", line 706, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\exports.py", line 1336, in say
+    who(what, *args, **kwargs)
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\character.py", line 1139, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\character.py", line 842, in do_display
+    **display_args)
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\character.py", line 591, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\ui.py", line 295, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\display\core.py", line 2699, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\display\core.py", line 3377, in interact_core
+    renpy.audio.audio.periodic()
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\audio\audio.py", line 1023, in periodic
+    six.reraise(exc[0], exc[1], exc[2])
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\audio\audio.py", line 1001, in periodic_thread_main
+    periodic_pass()
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\audio\audio.py", line 942, in periodic_pass
+    c.periodic()
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\audio\audio.py", line 420, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn)
+  File "D:\Program Files (x86)\RenPy\renpy-7.3.2-sdk\renpy\loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'music/crickets.mp3'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 A 2 Good Boys Adventure 1.0
-Thu Aug 08 21:47:17 2019
+Mon Aug 12 21:16:16 2019

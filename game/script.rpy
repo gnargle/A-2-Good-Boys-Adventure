@@ -160,6 +160,8 @@ label after_chippy:
 
     show guy right at right with easeinright    
 
+    play music "music/crickets.mp3" loop
+
     g "So just tae check - you saw the Thistle at the chippy too, aye?"
 
     b "Aye, that was pretty fuckin' weird."
@@ -178,6 +180,10 @@ label after_chippy:
     show thistle right with vpunch
 
     t "Youse fuckin' talkin' about me, aye!?"
+
+    g "Aw naw."
+
+    t "I telt ye, Woodward! Am coming for you!"
 
 
 label end:
