@@ -8,6 +8,9 @@ define gh = Character("Guy's Head", color = "#b603fc")
 define b = Character("Barry", color = "#009933", image = "barry")
 define t = Character("Partick Thistle", color = "#ffcc00", image = "thistle")
 
+#var initialisation.
+default fish = 0
+
 
 # The game starts here.
 
@@ -108,6 +111,8 @@ label chippy:
 
     show thistle right at offscreenright with moveoutright
 
+    hide thistle
+
     "[[The Partick Thistle dashes off to god knows where.]"
 
     g "..."
@@ -115,6 +120,65 @@ label chippy:
     b "..."
 
     g "So youse wanting cod or haddock?"    
+
+    menu chippy_choice:
+        "What fish youse wantin'?"
+
+        "Cod":
+            jump cod_get
+
+        "Haddock":
+            jump haddock_get
+
+label cod_get:
+
+    "Barry got some battered cod, without chips but with mushy peas. Weird choice, but sure. Why not?"
+    $fish = 1
+    jump after_chippy
+
+label haddock_get:
+
+    "Barry got some battered haddock, with chips, salt and vinegar. The author's personal choice, so he's done well."
+    $fish = 2
+    jump after_chippy
+
+label after_chippy:
+
+    "The two good boys head for Guy's house, stomachs lurching in preparation for the greasy excellence that was soon to follow."
+
+    show guy right at offscreenleft with easeoutleft
+
+    show barry right at offscreenleft with easeoutleft
+    
+    window hide 
+
+    scene bg garnockriver with fade
+
+    show barry right at left with easeinright
+
+    show barry left
+
+    show guy right at right with easeinright    
+
+    g "So just tae check - you saw the Thistle at the chippy too, aye?"
+
+    b "Aye, that was pretty fuckin' weird."
+
+    g "Ah well. Probably just some fella had a bit too much to drink."
+
+    b "Aye, but he knew yir name, Guy!"
+
+    g "Glengarnock's no very big and I work with the public. Probably that."
+
+    b "..."
+
+    b "Aye, probably that."
+
+    show thistle right at center with moveinbottom
+    show thistle right with vpunch
+
+    t "Youse fuckin' talkin' about me, aye!?"
+
 
 label end:
 
